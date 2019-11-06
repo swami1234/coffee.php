@@ -4,6 +4,8 @@
 <?php include('navbar.php'); ?>
 <?php include('header.php'); ?>
 
+
+
 <div class="container">
 	<h1 class="page-header text-center">Welcome to Martha's Brew Coffee Stand-Online Order</h1>
 	<form method="POST" action="purchase.php">
@@ -14,10 +16,12 @@
 				<th>Product Name</th>
 				<th>Price</th>
 				<th>Quantity</th>
-        <th>Customise Your Order</th>
+
+
 			</thead>
 			<tbody>
 				<?php
+
 					$sql="select * from product left join category on category.categoryid=product.categoryid order by product.categoryid asc, productname asc";
 					$query=$conn->query($sql);
 					$iterate=0;
@@ -29,7 +33,7 @@
 							<td><?php echo $row['productname']; ?></td>
 							<td class="text-right">&#x24; <?php echo number_format($row['price'], 2); ?></td>
 							<td><input type="text" class="form-control" name="quantity_<?php echo $iterate; ?>"></td>
-              <td><input type="text" class="form-control" placeholder="Customise your order" name="customorder_<?php echo $iterate; ?>"></td>
+
 
 						</tr>
 						<?php
@@ -40,15 +44,24 @@
 		</table>
 
 		<div class="row">
+
+
+			<div class="col-md-3">
+					<input type="number" name="phone_number" class="form-control" placeholder="Phone Number" required>
+			</div>
 			<div class="col-md-3">
 				<input type="text" name="customer" class="form-control" placeholder="Customer Name" required>
-        	<input type="text" name="phonenumer" class="form-control" placeholder="Phone Number" required>
+			</div>
+
+
+			<div class="col-md-3">
+					<input type="text" name="custom" class="form-control" placeholder="Custom Order">
 			</div>
 			<div class="col-md-2" style="margin-left:-20px;">
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
 			</div>
 		</div>
-	</form>
+
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -58,7 +71,6 @@
 	});
 </script>
 </body>
-
 
 
 </html>

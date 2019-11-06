@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <nav class="navbar navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,9 +19,12 @@
       <ul class="nav navbar-nav">
         <li><a href="index.php">Menu</a></li>
 
-        <li><a href="sales.php">Sales</a></li>
-      </ul>
+                <li><a href="sales.php">Sales</a></li>
+
+                <li>
+
+                
     </div><!-- /.navbar-collapse -->
-    <p><a href="login.php">Log in</a></p>
+
   </div><!-- /.container-fluid -->
 </nav>
