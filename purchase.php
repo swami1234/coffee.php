@@ -3,7 +3,9 @@
 	if(isset($_POST['productid'])){
 
 		$customer=$_POST['customer'];
-		$sql="insert into purchase (customer, date_purchase) values ('$customer', NOW())";
+		$custom=$_POST['custom'];
+		$phonenumber=$_POST['phone_number'];
+		$sql="insert into purchase (customer, date_purchase,custom,phone_number) values ('$customer', NOW(),'$custom','$phonenumber')";
 		$conn->query($sql);
 		$pid=$conn->insert_id;
 

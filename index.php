@@ -22,7 +22,11 @@
 			<tbody>
 				<?php
 
-					$sql="select * from product left join category on category.categoryid=product.categoryid order by product.categoryid asc, productname asc";
+					$sql="select *
+					      from product
+								left join category
+								on category.categoryid=product.categoryid
+								order by product.categoryid asc, productname asc";
 					$query=$conn->query($sql);
 					$iterate=0;
 					while($row=$query->fetch_array()){

@@ -1,4 +1,6 @@
 <?php
+
+include('auth.php');
 	session_start();
 ?>
 <nav class="navbar navbar-default">
@@ -21,9 +23,18 @@
 
                 <li><a href="sales.php">Sales</a></li>
 
-                <li>
+								<?php if (isLoggedIn()): ?>
 
-                
+								    <p><a href="logout.php">Log out</a></p>
+								    <p><a href="list.php">List of Orders</a></p>
+
+								<?php else: ?>
+
+								    <p><a href="login.php">Log in</a></p>
+
+								<?php endif; ?>
+
+
     </div><!-- /.navbar-collapse -->
 
   </div><!-- /.container-fluid -->

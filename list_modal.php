@@ -13,7 +13,7 @@
                             <?php echo date('M d, Y h:i A', strtotime($row['date_purchase'])) ?>
                         </span>
                     </h5>
-                    <h5>Customer Phone Number: <b><?php echo $row['phone']; ?></b>
+                    <h5>Customer Phone Number: <b><?php echo $row['phone_number']; ?></b>
 
                     </h5>
                     <table class="table table-bordered table-striped">
@@ -59,7 +59,7 @@
               <a href="#editproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
               <a href="#deleteproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
               <?php include('product_modal.php'); ?>
-            
+
             </div>
         </div>
         <!-- /.modal-content -->
