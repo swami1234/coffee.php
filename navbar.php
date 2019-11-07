@@ -20,19 +20,17 @@ include('auth.php');
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.php">Menu</a></li>
+           <?php if (isLoggedIn()): ?>
+           <li><p><a href="logout.php">Log out</a></p></li>
+				 </br>
+					 <li><p><a href="list.php">List of Orders</a></p></li>
 
-                <li><a href="sales.php">Sales</a></li>
+					<?php else: ?>
 
-								<?php if (isLoggedIn()): ?>
-
-								    <p><a href="logout.php">Log out</a></p>
-								    <p><a href="list.php">List of Orders</a></p>
-
-								<?php else: ?>
-
-								    <p><a href="login.php">Log in</a></p>
-
-								<?php endif; ?>
+					 <li><p><a href="login.php">Log in</a></p></li>
+				 </br>
+           <li><a href="sales.php">Sales</a></li>
+		 			<?php endif; ?>
 
 
     </div><!-- /.navbar-collapse -->
