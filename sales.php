@@ -1,5 +1,7 @@
-<?php include('header.php'); ?>
-<?php include('sales_modal.php'); ?>
+<?php include('header.php');
+	 include('sales_modal.php');
+ ?>
+
 <body>
 <?php include('navbar.php'); ?>
 <div class="container">
@@ -24,11 +26,19 @@
 						<td><?php echo $row['customer']; ?></td>
 						<td class="text-right">&#x24; <?php echo number_format($row['total'], 2); ?></td>
 							<td><?php echo $row['custom']; ?></td>
-						<td><a href="#details<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> View & Pay </a></td>
+
+					<td><a href="#details<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> View & Pay </a>
+	<?php include('sales_modal.php'); ?>
+					</td>
+
            </tr>
+
 					 <?php
+
 				 }
+
 			 ?>
+
 		</tbody>
 	</table>
 </div>
