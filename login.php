@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['is_logged_in'] = true;
 
-        header("Location: index.php");
+        header("Location: list.php");
 
     } else {
 
@@ -36,12 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="username">Username</label>
         <input name="username" id="username">
     </div>
-
+</br>
     <div>
         <label for="password">Password</label>
         <input type="password" name="password" id="password">
     </div>
-
+</br>
     <button>Log in</button>
 
 </form>

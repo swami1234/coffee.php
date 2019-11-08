@@ -1,4 +1,4 @@
-<!-- Sales Details -->
+
 <div class="modal fade" id="details1<?php echo $row['purchaseid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -22,7 +22,7 @@
                             <th>Price</th>
                             <th>Purchase Quantity</th>
                             <th>Subtotal</th>
-                            <th>Paid?</th>
+
                         </thead>
                         <tbody>
                             <?php
@@ -40,7 +40,7 @@
                                                 echo number_format($subt, 2);
                                             ?>
                                         </td>
-                                        <td>Yes</td>
+                                    
                                     </tr>
                                     <?php
 
@@ -56,9 +56,6 @@
                 </div>
 			</div>
             <div class="modal-footer">
-              <a href="#editproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-              <a href="#deleteproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-              <?php include('product_modal.php'); ?>
 
             </div>
         </div>

@@ -59,7 +59,7 @@
 
 
 			<div class="col-md-3">
-					<input type="text" name="custom" class="form-control" placeholder="Custom Order">
+					<input type="text" name="custom" class="form-control" placeholder="Custom Requirement">
 			</div>
 			<div class="col-md-2" style="margin-left:-20px;">
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>

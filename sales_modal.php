@@ -20,6 +20,8 @@
                             <th>Price</th>
                             <th>Purchase Quantity</th>
                             <th>Subtotal</th>
+                            <th></th>
+                            <th>Pay with Credit Card</th>
                         </thead>
                         <tbody>
                             <?php
@@ -37,6 +39,34 @@
                                                 echo number_format($subt, 2);
                                             ?>
                                         </td>
+                                        <td><input type="hidden" name="purchaseid"><?php echo $drow['purchaseid'] ?></input></td>
+                                        <td><form method="POST" action="final.php">
+                                          <table class="table table-striped table-bordered">
+                                            <thead>
+
+                                              <th>Name on Card</th>
+                                              <th>Card Number</th>
+                                              <th>Expiry Date</th>
+                                              <th>Billing Zipcode</th>
+                                              <th>Cvs</th>
+                                              <th></th>
+
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                  <td><input type="text" class="form-control" name="name<?php echo $iterate; ?>"></td>
+                                                  <td><input type="text" class="form-control" name="card<?php echo $iterate; ?>"></td>
+                                                  <td><input type="text" class="form-control" name="expiry<?php echo $iterate; ?>"></td>
+                                                  <td><input type="text" class="form-control" name="zip<?php echo $iterate; ?>"></td>
+                                                  <td><input type="text" class="form-control" name="cvs<?php echo $iterate; ?>"></td>
+                                                  <td><input type='hidden' name='purchaseid' value='<?php echo $purchaseid ?>'</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        <button type="submit"  class="btn btn-success" data-dismiss="pay">Pay</button>
+
+                                          </td>
+
                                     </tr>
                                     <?php
 
@@ -52,9 +82,8 @@
                 </div>
 			</div>
             <div class="modal-footer">
-<p><a href="pay.php">Pay for Your Order Now....</a></p>
 
-                  <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-success"></span>Pay for order instore</button>
+
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
             </div>
         </div>

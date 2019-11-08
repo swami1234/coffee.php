@@ -1,7 +1,7 @@
 <?php
 
 include('auth.php');
-	session_start();
+session_start();
 ?>
 <nav class="navbar navbar-default">
   <div class="container">
@@ -31,6 +31,7 @@ include('auth.php');
 				 </br>
            <li><a href="sales.php">Sales</a></li>
 		 			<?php endif; ?>
+
 
 
     </div><!-- /.navbar-collapse -->
