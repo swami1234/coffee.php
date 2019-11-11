@@ -1,11 +1,13 @@
 <?php
 	include('conn.php');
+
 	if(isset($_POST['productid'])){
 
 		$customer=$_POST['customer'];
 		$custom=$_POST['custom'];
 		$phonenumber=$_POST['phone_number'];
-		$sql="insert into purchase (customer, date_purchase,custom,phone_number,payment) values ('$customer', NOW(),'$custom','$phonenumber','unpaid')";
+		$pickup=$POST['pickup_time'];
+		$sql="insert into purchase (customer, date_purchase,custom,phone_number,pickup_time,payment) values ('$customer', NOW(),'$custom','$phonenumber','$pickup','unpaid')";
 		$conn->query($sql);
 		$pid=$conn->insert_id;
 
@@ -30,7 +32,7 @@
 
  		$sql="update purchase set total='$total' where purchaseid='$pid'";
  		$conn->query($sql);
-		header('location:sales.php');
+		header('location:thankyou.php');
 	}
 	else{
 		?>

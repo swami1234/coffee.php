@@ -1,18 +1,20 @@
 <?php include('header.php');
-	 include('sales_modal.php');
+
  ?>
 
 <body>
 <?php include('navbar.php'); ?>
 <div class="container">
-	<h1 class="page-header text-center">ORDER LIST</h1>
+	<h1 class="page-header text-center">THANK YOU FOR YOUR ONLINE PAYMENT FOR FOLLOWING ORDER </h1>
 	<table class="table table-striped table-bordered">
 		<thead>
 			<th>Date</th>
 			<th>Customer</th>
 			<th>Total Sales</th>
 			<th>Custom</th>
-			<th>Details</th>
+
+			<th>Pick up Time</th>
+
 		</thead>
 		<tbody>
 			<?php
@@ -26,9 +28,14 @@
 						<td><?php echo $row['customer']; ?></td>
 						<td class="text-right">&#x24; <?php echo number_format($row['total'], 2); ?></td>
 							<td><?php echo $row['custom']; ?></td>
+	         <td><?php echo $row['pickup_time']; ?></td>
+					<td>
 
-					<td><a href="#details<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> View & Pay </a>
-	        <?php include('sales_modal.php'); ?>
+					
+            <?php include('sales_modal.php'); ?>
+
+
+
 					</td>
 
            </tr>

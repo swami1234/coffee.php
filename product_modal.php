@@ -1,15 +1,14 @@
-	<?php include('editorder.php'); ?>
-  <?php include('conn.php'); ?>
-<div class="modal fade" id="editorder<?php echo $row['pdid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Edit Product -->
+<div class="modal fade" id="editproduct<?php echo $row['productid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <center><h4 class="modal-title" id="myModalLabel">Edit Order</h4></center>
+                <center><h4 class="modal-title" id="myModalLabel">EDIT ORDER STATUS</h4></center>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                    <form method="POST" action="editproduct.php?product=<?php echo $row['purchaseid']; ?>" enctype="multipart/form-data">
+                    <form method="POST" action="editproduct.php?product=<?php echo $row['productid']; ?>" enctype="multipart/form-data">
                     <div class="form-group" style="margin-top:10px;">
                         <div class="row">
                             <div class="col-md-3" style="margin-top:7px;">
@@ -20,29 +19,38 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-3" style="margin-top:7px;">
-                                <label class="control-label">Price:</label>
+                                <label class="control-label">Category:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" value="<?php echo $row['price']; ?>" name="price">
+                                <select class="form-control" name="category">
+                                    <option value="<?php echo $row['categoryid']; ?>"><?php echo $row['catname']; ?></option>
+                                    <?php
+                                        $sql="select * from category where categoryid != '".$row['categoryid']."'";
+                                        $cquery=$conn->query($sql);
+
+                                        while($crow=$cquery->fetch_array()){
+                                            ?>
+                                            <option value="<?php echo $crow['categoryid']; ?>"><?php echo $crow['catname']; ?></option>
+                                            <?php
+                                        }
+                                    ?>
+                                </select>
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-3" style="margin-top:7px;">
-                                <label class="control-label">Quantity:</label>
+                                <label class="control-label">Order Status:</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" value="<?php echo $row['quantity']; ?>" name="quantity">
+                                <input type="text" class="form-control" value="<?php echo $row['porderstatus']; ?>" name="porderstatus">
                             </div>
                         </div>
                     </div>
-
 
                 </div>
 			</div>
@@ -58,7 +66,7 @@
 </div>
 
 <!-- Delete Product -->
-<div class="modal fade" id="deleteorder<?php echo $row['purchaseid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteproduct<?php echo $row['productid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

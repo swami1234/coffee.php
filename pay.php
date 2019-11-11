@@ -1,8 +1,10 @@
 <?php include('header.php'); ?>
+
 <html>
 <body>
 <?php include('navbar.php'); ?>
 <?php include('header.php'); ?>
+
 <?php $purchaseid=$_POST['purchaseid']; ?>
 <div class="container">
 	<h1 class="page-header text-center">Pay with Credit Card Here......</h1>
@@ -29,6 +31,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<?php callq() ?>
   <button type="submit<?php echo $purchaseid ?>"  class="btn btn-success" data-dismiss="pay">Pay</button>
 </body>
 </html>

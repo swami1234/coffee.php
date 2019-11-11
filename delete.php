@@ -3,7 +3,7 @@
 
 	$id = $_GET['purchase'];
 
-	$sql="delete from purchase where productid='$id'";
+	$sql="delete from purchase where purchasetid='$id'";
 	$conn->query($sql);
 
 	header('location:list.php');

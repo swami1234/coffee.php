@@ -28,10 +28,9 @@
 						  <td><?php echo $row['custom']; ?></td>
             <td><?php echo $row['payment']; ?></td>
 						<td><a href="#details1<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm">Check Order Details</a>
-            <a href="#editorder<?php echo $row['pdid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-						<a href="#deleteorder<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
 
-							<?php include('sales_modal.php'); ?>
+
+
 							<?php include('list_modal.php'); ?>
 						</td>
 					</tr>

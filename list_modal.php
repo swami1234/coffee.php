@@ -40,7 +40,7 @@
                                                 echo number_format($subt, 2);
                                             ?>
                                         </td>
-                                    
+
                                     </tr>
                                     <?php
 
@@ -52,7 +52,8 @@
                             </tr>
                         </tbody>
                     </table>
-
+                    <a href="#editpurchase<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a href="#deletepurchase<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
                 </div>
 			</div>
             <div class="modal-footer">

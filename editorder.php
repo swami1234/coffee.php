@@ -3,10 +3,10 @@
 
 	$id=$_GET['pdid'];
 
-	$pname=$_POST['productname'];
+	$pname=$_GET['productname'];
 
-	$price=$_POST['price'];
-  $qty=$_POST['quantity'];
+	$price=$_GET['price'];
+  $qty=$_GET['quantity'];
 
 	$sql="select * from product where productid='$id'";
 	$query=$conn->query($sql);
