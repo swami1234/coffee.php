@@ -26,7 +26,7 @@
 
 				<th>Product Name</th>
 				<th>Price</th>
-        <th>Order Status</th>
+
 				<th>Action</th>
 			</thead>
 			<tbody>
@@ -45,7 +45,7 @@
 
 							<td><?php echo $row['productname']; ?></td>
 							<td>&#x24;<?php echo number_format($row['price'], 2); ?></td>
-              <td><?php echo $row['porderstatus']; ?></td>
+            
 							<td>
 								<a href="#editproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a> || <a href="#deleteproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
 								<?php include('product_modal.php'); ?>

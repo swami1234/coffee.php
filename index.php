@@ -3,6 +3,29 @@
 <body>
 <?php include('navbar.php'); ?>
 <?php include('header.php'); ?>
+<style>
+h1 {
+
+  color: #6a5acd;
+}
+
+</style>
+<style>
+#cc {
+
+  color: #6a5acd;
+}
+
+</style>
+<style>
+#a th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#6a5acd;
+  color: white;
+}
+</style>
 
 
 
@@ -28,7 +51,7 @@
 	</div>
 		</br>
 	<form method="POST" action="purchase.php">
-		<table class="table table-striped table-bordered">
+		<table id="a" class="table table-striped table-bordered">
 			<thead>
 				<th class="text-center"><input type="checkbox" id="checkAll"></th>
 				<th>Category</th>
@@ -86,7 +109,7 @@
 			</div>
 
 			<div class="col-md-2" style="margin-left:-20px;">
-				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+				<button type="submit" id="cc"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
 			</div>
 		</div>
 

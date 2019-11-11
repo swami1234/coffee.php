@@ -7,7 +7,7 @@
 		$custom=$_POST['custom'];
 		$phonenumber=$_POST['phone_number'];
 		$pickup=$POST['pickup_time'];
-		$sql="insert into purchase (customer, date_purchase,custom,phone_number,pickup_time,payment) values ('$customer', NOW(),'$custom','$phonenumber','$pickup','unpaid')";
+		$sql="insert into purchase (customer, date_purchase,custom,phone_number,pickup_time,payment,orderstatus) values ('$customer', NOW(),'$custom','$phonenumber','$pickup','unpaid','ordered')";
 		$conn->query($sql);
 		$pid=$conn->insert_id;
 

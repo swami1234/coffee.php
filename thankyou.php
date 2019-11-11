@@ -1,7 +1,29 @@
+<style>
+h1 {
+
+  color: #6a5acd;
+}
+h3 {
+
+  color: #6a5acd;
+}
+</style>
+<style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #6a5acd;
+  color: white;
+}
+</style>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<p> THANK YOU FOR PLACING ORDER </p>
+	<h1 class="page-header text-center">Welcome to Martha's Brew Coffee Stand-Online Order</h1>
 
   <P> You can choose to pay now or return to menu by clicking here <li><a href="index.php">Return to Menu -- for instore payment</a></li>
   </br>
@@ -31,6 +53,7 @@
       </tr>
     </tbody>
   </table>
-  <p> Process the payment by clicking on pay now </P>
+
+  <p><h3> Process the payment by clicking on pay now</h3> </P>
   <P><a href="sales.php">Pay Now</a></P>
 </head>

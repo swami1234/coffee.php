@@ -1,28 +1,3 @@
-<?php
-
-require 'url.php';
-
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    if ($_POST['username'] == 'dave' && $_POST['password'] == 'secret') {
-
-        session_regenerate_id(true);
-
-        $_SESSION['is_logged_in'] = true;
-
-        header("Location: list.php");
-
-    } else {
-
-        $error = "login incorrect";
-
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,48 +65,58 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
+#cc {
+
+  color: #6a5acd;
+}
 </style>
 </head>
 <body>
-  <?php require 'header.php'; ?>
 
-
-
-  <?php if (! empty($error)) : ?>
-      <p><?= $error ?></p>
-  <?php endif; ?>
-
-
-
-
-
-
-
-<h2>Login here.....</h2>
-<p>Staff can login with username and password</p>
+<h2>Contact Form</h2>
+<p>Please contact us by filling the form below and helps us improve. </p>
 
 <div class="container">
-  <form method="post">
+  <form action="/action_page.php">
   <div class="row">
     <div class="col-25">
-      <label for="username">Username</label>
+      <label for="fname">First Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="username" name="username" placeholder="Your username..">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="password">Password</label>
+      <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
-      <input type="password" id="password" name="password" placeholder="Your password..">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
     </div>
   </div>
-
-
   <div class="row">
-    <input type="submit" value="Login">
+    <div class="col-25">
+      <label for="country">Purpose of Contact</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">Tips on Improvement</option>
+        <option value="canada">Complain</option>
+        <option value="usa">Review</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit"  value="Submit">
+    <a class="active" href="index.php">Return to Menu</a>
   </div>
   </form>
 </div>
