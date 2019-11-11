@@ -31,7 +31,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<?php callq() ?>
+	
   <button type="submit<?php echo $purchaseid ?>"  class="btn btn-success" data-dismiss="pay">Pay</button>
 </body>
 </html>
