@@ -2,7 +2,7 @@
 <body>
 <?php include('navbar.php'); ?>
 <div class="container">
-	<h1 class="page-header text-center">CATEGORY CRUD</h1>
+	<h1 class="page-header text-center">Add or delete Category</h1>
 	<div class="row">
 		<div class="col-md-12">
 			<a href="#addcategory" data-toggle="modal" class="pull-right btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Category</a>

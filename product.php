@@ -2,7 +2,7 @@
 <body>
 <?php include('navbar.php'); ?>
 <div class="container">
-	<h1 class="page-header text-center">EDIT ORDER</h1>
+	<h1 class="page-header text-center">Add or Delete Product</h1>
 	<div class="row">
 		<div class="col-md-12">
 			<select id="catList" class="btn btn-default">
@@ -45,7 +45,7 @@
 
 							<td><?php echo $row['productname']; ?></td>
 							<td>&#x24;<?php echo number_format($row['price'], 2); ?></td>
-            
+
 							<td>
 								<a href="#editproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</a> || <a href="#deleteproduct<?php echo $row['productid']; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
 								<?php include('product_modal.php'); ?>
